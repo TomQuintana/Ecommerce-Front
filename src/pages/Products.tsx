@@ -1,8 +1,11 @@
 import React from 'react'
+import AllProducts from '../components/AllProducts'
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <div className='bg-white mt-3 mb-3'>
+      <AllProducts />
+    </div>
   )
 }
 
