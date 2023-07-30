@@ -10,9 +10,8 @@ function App() {
   <BrowserRouter>
       <Routes>
         <Route path='/' element={<AuthLayout />}>
-          <Route index element={<NavigatePage/>}/>
+          <Route index element={<Products/>}/>
           <Route path='login' element={<Login/>} />
-          <Route path='products' element={<Products/>} />
         </Route>
       </Routes>
     </BrowserRouter>

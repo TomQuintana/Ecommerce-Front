@@ -23,7 +23,7 @@ const NavigatePage = () => {
               <div>
                 <Link 
                   className=""
-                  to="/products">Productos 
+                  to="/">Productos 
                 </Link> 
               </div>
               
@@ -33,12 +33,9 @@ const NavigatePage = () => {
               <div>
                 Quienes somos ?
               </div>
-
             </div>
 
-
             <div className='flex justify-start p-2'>
-
               { /* TODO: falta pegarle al back para validar los datos */ }
             {/* Sign in */}
               <div className='flex justify-between gap-1'>
@@ -71,7 +68,6 @@ const NavigatePage = () => {
                   <span className="sr-only">items in cart, view bag</span>
                 </a>
               </div>
-
             </div>
           </div>
         </nav>
