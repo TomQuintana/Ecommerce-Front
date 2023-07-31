@@ -62,9 +62,7 @@ const NavigatePage = () => {
 
               {/* Cart */}
               <div className="lg:ml-6">
-                <Cart 
-                  cart={cart}
-                />
+                <Cart />
               </div>
             </div>
           </div>
