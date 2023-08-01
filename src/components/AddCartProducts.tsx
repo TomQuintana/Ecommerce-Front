@@ -1,13 +1,25 @@
 import {useState} from 'react';
+import useProducts from '../hooks/useProducts';
+import useCart from '../hooks/useCart';
 
 const AddCartProducts = ({product}) => {
 
-  const [cart, setCart] = useState([])
-
+  const {productos} = useProducts()
+  const {cartItems, setCartItems} = useCart()
+  
   const addToCart = (producto) => {
-    setCart(producto)
+    productos.forEach(element => {
+      if(element._id == producto._id) {
+        console.log(element);
+        
+        setCartItems([...cartItems, producto])
+      }
+    });
   }
-  console.log(cart);
+  
+  const cartToJson = JSON.stringify(cartItems)
+    localStorage.setItem('Cart', cartToJson)
+  console.log(cartItems);
   
   return (
     <>

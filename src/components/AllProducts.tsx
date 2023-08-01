@@ -1,24 +1,19 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import AddCartProducts from './AddCartProducts'
+import useProducts from '../hooks/useProducts'
 
 const AllProducts = () => {
 
-  const [products, setProducts] = useState([])
+  const {productos} = useProducts()
+  
 
-  useEffect( () => {
-    const getProducts = async () => {
-      const { data } = await axios.get('http://localhost:4001/api/products/all')
-      setProducts(data.products)
-    }
 
-    getProducts()
-  }, [])
 
   return (
     <>
       <div className='grid grid-cols-3 items-center gap-8 container mx-auto font-mono'>
-        {products.map((producto, index) => 
+        {productos.map((producto, index) => 
           <div className='border shadow-black  px-4 py-16'>
             <img 
               src={producto.img}
