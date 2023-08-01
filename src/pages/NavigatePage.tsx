@@ -1,12 +1,14 @@
 import { MagnifyingGlassIcon, ShoppingBagIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { Outlet } from "react-router-dom"
 import { Link } from "react-router-dom"
 import React, { useState } from 'react';
+import useProducts from '../hooks/useProducts';
+import useCart from '../hooks/useCart';
 import textsPromo from '../texts/promo.json'
 import Promo from '../components/Promo'
 import Cart from './Cart'
 
 const NavigatePage = () => {
-
 
   const {texts} = textsPromo
 
@@ -62,12 +64,15 @@ const NavigatePage = () => {
 
               {/* Cart */}
               <div className="lg:ml-6">
-                <Cart />
+                <Cart  />
               </div>
             </div>
           </div>
         </nav>
       </header>
+      <main className=''>
+        <Outlet />
+      </main>
     </>
   )
 }
