@@ -10,7 +10,6 @@ const AddCartProducts = ({product}) => {
   const addToCart = (producto) => {
     productos.forEach(element => {
       if(element._id == producto._id) {
-        console.log(element);
         
         setCartItems([...cartItems, producto])
       }
@@ -19,7 +18,6 @@ const AddCartProducts = ({product}) => {
   
   const cartToJson = JSON.stringify(cartItems)
     localStorage.setItem('Cart', cartToJson)
-  console.log(cartItems);
   
   return (
     <>
