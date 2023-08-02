@@ -1,14 +1,9 @@
-import {useState, useEffect} from 'react'
-import axios from 'axios'
 import AddCartProducts from './AddCartProducts'
 import useProducts from '../hooks/useProducts'
 
 const AllProducts = () => {
 
   const {productos} = useProducts()
-  
-
-
 
   return (
     <>
