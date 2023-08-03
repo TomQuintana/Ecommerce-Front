@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 // Define el tipo para el objeto que estará en el array
 type CartItem = {
